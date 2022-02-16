@@ -5,15 +5,40 @@
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
+    let newnumber = [];
+    if (numbers.length == 0) {
+        return newnumber;
+    } else if (numbers.length == 1) {
+        newnumber = [numbers, numbers];
+        return newnumber;
+    } else {
+        newnumber = [numbers[0], numbers[-1]];
+        return newnumber;
+    }
+}
+/*
+    const newnumber = [...numbers];
+    const newnumber1 = [];
+    if (numbers.length == 0) {
+        return newnumber1;
+    } else if (numbers.length == 1) {
+        newnumber.splice(1, 0, numbers);
+        return newnumber;
+    } else{
+        return newarray[(numbers.startsWith(), numbers.endsWith())];
+    }
+    
     return numbers;
 }
+*/
 
 /**
  * Consume an array of numbers, and return a new array where each
  * number has been tripled (multiplied by 3).
  */
 export function tripleNumbers(numbers: number[]): number[] {
-    return numbers;
+    const tripled = numbers.map((numbers: number): number => numbers * 3);
+    return tripled;
 }
 
 /**
