@@ -1,4 +1,4 @@
-import { ImportsNotUsedAsValues, isJSDocThisTag } from "typescript";
+//import { ImportsNotUsedAsValues, isJSDocThisTag } from "typescript";
 
 /**
  * Consume an array of numbers, and return a new array containing
@@ -133,6 +133,6 @@ export function injectPositive(values: number[]): number[] {
     let newArray = [...values];
     firstnegnumIndex !== -1
         ? newArray.splice(firstnegnumIndex + 1, 0, sum)
-        : (newArray = [...values, sum]);
+        : newArray = [...values, sum];
     return newArray;
 }
