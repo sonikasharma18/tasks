@@ -129,10 +129,9 @@ export function injectPositive(values: number[]): number[] {
         (total: number, num: number) => total + num,
         0
     );
-    console.log("hi");
     let newArray = [...values];
     firstnegnumIndex !== -1
         ? newArray.splice(firstnegnumIndex + 1, 0, sum)
-        : newArray = [...values, sum];
+        : (newArray = [...values, sum]);
     return newArray;
 }
