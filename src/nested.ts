@@ -35,15 +35,10 @@ export function findQuestion(
     questions: Question[],
     id: number
 ): Question | null {
-    const idFound = questions.some(
-        (question: Question): boolean => question.id === id
-    );
-    console.log("hello");
-    const noidQuestion = questions.find(
-        (question: Question): boolean => question.id === id
-    );
-    if (idFound) {
-        return noidQuestion;
+    const value = questions.findIndex((element) => element.id === id);
+    console.log(value);
+    if (value >= 0) {
+        return questions[value];
     } else {
         return null;
     }
