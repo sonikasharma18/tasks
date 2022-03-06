@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
-import { convertCompilerOptionsFromJson } from "typescript";
 
 /**
  * Here is a helper function you *must* use to "roll" your die.
