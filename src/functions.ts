@@ -87,6 +87,13 @@ export function add3(first: number, second: number, third: number): number {
 /**
  * Consumes a string and produces the same string in UPPERCASE and with an exclamation
  * mark added to the end.
+ * const fullWord: Record<Hoilday, string> = {
+    NPD: "National Popcorn Day",
+    NCCD: "National Carrot Cake Day",
+    WSD: "World Sleep Day",
+    NFARD: "National Fina A Rainbow Day",
+    NLD: "National Lemonade Day"
+};
  */
 export function shout(message: string): string {
     return message.toUpperCase() + "!";
