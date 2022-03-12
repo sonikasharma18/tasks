@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import { Form } from "react-bootstrap";
 
-type ChangeEvent = React.ChangeEvent<
-    HTMLTextAreaElement | HTMLInputElement | HTMLSelectElement
->;
+type ChangeEvent = React.ChangeEvent<HTMLInputElement>;
 
 export function EditMode(): JSX.Element {
     const [name, setName] = useState<string>("Your Name");
@@ -11,44 +9,55 @@ export function EditMode(): JSX.Element {
     const [isEditing, setisEditing] = useState<boolean>(false);
 
     function updateName(event: ChangeEvent) {
-        console.log(name);
         setName(event.target.value);
-        console.log(name);
     }
+    function updateIsStudent(event: ChangeEvent) {
+        setisStudent(event.target.checked);
+    }
+
+    function updateIsEditing(event: ChangeEvent) {
+        setisEditing(event.target.checked);
+    }
+
     return (
         <div>
-            <h3>Edit Mode</h3>
             <div>
-                <Form.Check
-                    type="switch"
-                    id="is-edit-mode"
-                    label="Editing"
-                    checked={isEditing}
-                    onChange={() => setisEditing(!isEditing)}
-                />
-            </div>
-            <div>
-                {isEditing ? (
-                    <div>
-                        <Form.Group controlId="formPersonName">
-                            <Form.Label>Name:</Form.Label>
-                            <Form.Control value={name} onChange={updateName} />
-                        </Form.Group>
+                <div>
+                    <h3>Edit Mode</h3>
+                    <Form.Check
+                        type="switch"
+                        id="is_switch-on"
+                        label="Editing"
+                        checked={isEditing}
+                        onChange={updateIsEditing}
+                    />
+                </div>
+                <div>
+                    {isEditing && (
                         <Form.Check
                             type="switch"
                             id="is-student"
                             label="Not a student"
                             checked={isStudent}
-                            onChange={() => setisStudent(!isStudent)}
+                            onChange={updateIsStudent}
                         />
-                    </div>
-                ) : (
-                    <div>
-                        {isStudent
-                            ? name + " is a student"
-                            : name + " not a student"}
-                    </div>
-                )}
+                    )}
+                </div>
+                <div>
+                    {isEditing && (
+                        <Form.Group controlId="formPersonName">
+                            <Form.Label>Name:</Form.Label>
+                            <Form.Control
+                                type="string"
+                                value={name}
+                                onChange={updateName}
+                            />
+                        </Form.Group>
+                    )}
+                </div>
+                <div>
+                    {name} {isStudent ? "is a student" : "is not a student"}
+                </div>
             </div>
         </div>
     );
