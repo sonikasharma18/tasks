@@ -1,0 +1,73 @@
+/*
+ <option value={dogQuestion}>Dog Quiz</option>
+                        <option value={mathQuestion}>Math Quiz</option>
+                        <option value={csQuestion}>Common Sense</option>
+//import WebpagePic from "./assets/Webpage_idea.jpg";
+<img
+                style={{ height: "150px", padding: "15px" }}
+                //src={WebpagePic}
+                alt="A picture of my website idea"
+            />
+import React, { useState } from "react";
+import { Button } from "react-bootstrap";
+
+export function Quizzer(): JSX.Element {
+    //const [currentQuiz, setCurrentQuiz] = useState<boolean>(true);
+    const [answer, setAnswer] = useState<number>();
+    function DogQuestions(): void {
+        console.log("Question1:\n Do you like the outdoors?\n Points: 3");
+        console.log(
+            "Question2:\n Do you like sweet or salty foods \n Points: 3"
+        );
+        console.log(
+            "Question3:\n Pickcd ta between the two colors: Red or Blue?\n Points: 3"
+        );
+    }
+    function MathQuestion(): void {
+        console.log("Question1:\n What is 10 + 13?\n Points: 3");
+        console.log("Question2:\n What is 4*12 \n Points: 3");
+        console.log(
+            "Question3:\n Pick between the two numbers: 2 or 7?\n Points: 3"
+        );
+    }
+    function CheckMathQuestion(): void {
+        if (answer === 23 || answer === 48 || answer === 2) {
+            console.log("✔️");
+        } else {
+            console.log("❌");
+        }
+    }
+    return (
+        <div>
+            <h3>Quizzer</h3>
+            <div>
+                <h5>Dog Quiz!</h5>
+                <img
+                    style={{ height: "150px", padding: "15px" }}
+                    src="https://images.unsplash.com/photo-1615751072497-5f5169febe17?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y3V0ZSUyMGRvZ3xlbnwwfHwwfHw%3D&w=1000&q=80"
+                />
+                <span>
+                    This quiz will ask you three questions to figure out what
+                    kind of breed dog you are.
+                </span>
+                <div>
+                    <Button onClick={DogQuestions}>Dog Quiz</Button>
+                </div>
+
+                <div>
+                    <h5>Math Quiz!</h5>
+                    <img
+                        style={{ height: "150px", padding: "15px" }}
+                        src="https://assets.abcya.com/449c3086-9351-49b4-8767-5620db46f946"
+                    />
+                    <span>
+                        This quiz will ask you three questions to figure out if
+                        you are a math wizard.
+                    </span>
+                </div>
+                <Button onClick={MathQuestion}>Math Quiz</Button>
+            </div>
+        </div>
+    );
+}
+*/
