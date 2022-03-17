@@ -125,11 +125,12 @@ PASS src/components/Counter.test.tsx
 PASS src/components/RevealAnswer.test.tsx
 PASS src/bad-components/ColoredBox.test.tsx
 PASS src/bad-components/ShoveBox.test.tsx
+PASS src/quizzer/Quizzer.test.tsx
 PASS src/App.test.tsx
 -----------------------------|---------|----------|---------|---------|-------------------
 File                         | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -----------------------------|---------|----------|---------|---------|-------------------
-All files                    |   99.61 |    97.32 |     100 |    99.6 |                   
+All files                    |   92.57 |    97.32 |   94.85 |   92.41 |                   
  src                         |     100 |      100 |     100 |     100 |                   
   App.tsx                    |     100 |      100 |     100 |     100 |                   
   arrays.ts                  |     100 |      100 |     100 |     100 |                   
@@ -157,10 +158,13 @@ All files                    |   99.61 |    97.32 |     100 |    99.6 |
  src/interfaces              |       0 |        0 |       0 |       0 |                   
   answer.ts                  |       0 |        0 |       0 |       0 |                   
   question.ts                |       0 |        0 |       0 |       0 |                   
+ src/quizzer                 |    9.09 |      100 |    12.5 |    9.09 |                   
+  Quizzer.tsx                |   13.33 |      100 |      20 |   13.33 | 12-38             
+  startDogQuiz.tsx           |       0 |      100 |       0 |       0 | 6-25              
 -----------------------------|---------|----------|---------|---------|-------------------
 
-Test Suites: 20 passed, 20 total
-Tests:       134 passed, 134 total
+Test Suites: 21 passed, 21 total
+Tests:       135 passed, 135 total
 Snapshots:   0 total
-Time:        11.968 s
+Time:        13.219 s
 Ran all test suites.
