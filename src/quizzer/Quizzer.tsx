@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
-import Webpage from "../assets/website.jpg";
+import Webpage from "../assets/webpage.png";
 export function Quizzer(): JSX.Element {
     // This is the State (Model)
     const [Quiz, setQuiz] = useState<string>(
