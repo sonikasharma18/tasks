@@ -1,7 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import { Quizzer } from "./Quizzer";
-import userEvent from "@testing-library/user-event";
 
 function typeQuestion(questions: string): string {
     if (questions === "common sense quiz") {
