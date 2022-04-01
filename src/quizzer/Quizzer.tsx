@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import Webpage from "../assets/webpage.png";
-import { isCorrect } from "../objects";
+
 export function Quizzer(): JSX.Element {
     const [currentQuiz, setCurrentQuiz] = useState<string>("Dog Quiz");
 
@@ -297,7 +297,7 @@ export function Quizzer(): JSX.Element {
                     <Form.Control value={name} onChange={updateName} />
                 </Form.Group>
                 <div>
-                    The user is{" "}
+                    The user is
                     {name === "stop"
                         ? "✔️ and you have added 3 points to your total!"
                         : "❌"}
